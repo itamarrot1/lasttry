@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        const SERVER = 'https://test-sqlalchemy.onrender.com'
+        const display_users=()=>{
+        axios(SERVER + '/users').then (res => document.getElementById('display').innerHTML=res.data.users)
+        }
+        display_users()
+    </script>
+</body>
+</html>
